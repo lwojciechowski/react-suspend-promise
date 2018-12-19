@@ -1,0 +1,46 @@
+{
+  "name": "react-suspend-promise",
+  "version": "1.0.0",
+  "description": "Make React Suspense work with simple promises",
+  "main": "dist/callbag-concat-map.js",
+  "module": "dist/callbag-concat-map.es.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "jest --env=node",
+    "precommit": "lint-staged",
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
+    "prepare": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lwojciechowski/react-suspend-promise.git"
+  },
+  "keywords": [
+    "react",
+    "suspense",
+    "promise"
+  ],
+  "author": "Łukasz Wojciechowski <nostrzak@gmail.com> (https://github.com/lwojciechowski)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/lwojciechowski/react-suspend-promise/issues"
+  },
+  "homepage": "https://github.com/lwojciechowski/react-suspend-promise#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.2.0",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "husky": "^1.3.0",
+    "jest": "^23.6.0",
+    "lint-staged": "^8.1.0",
+    "prettier": "^1.15.3",
+    "rimraf": "^2.6.2",
+    "rollup": "^0.68.0",
+    "rollup-plugin-babel": "^4.1.0"
+  },
+  "dependencies": {}
+}
