@@ -1,4 +1,6 @@
-export default function suspendPromise(p) {
+import { useMemo, useState } from 'react'
+
+export function suspendPromise(p) {
   let state = 0
   let value
 
@@ -26,4 +28,11 @@ export default function suspendPromise(p) {
       // no default
     }
   }
+}
+
+export function usePromise(pfn, cacheKeys) {
+  return useMemo(() => {
+    const read = suspendPromise(pfn())
+    return read()
+  }, cacheKeys)
 }
